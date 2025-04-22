@@ -5,7 +5,6 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class User {
+public class DemoVo {
     private int id;
-    private String name;
 }
