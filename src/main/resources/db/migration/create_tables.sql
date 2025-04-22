@@ -1,6 +1,6 @@
-CREATE TABLE items (
+USE test_db
+CREATE TABLE IF NOT EXIST users (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
-    token VARCHAR(64) NOT NULL,
     name VARCHAR(255) NOT NULL,
     create_time DATETIME DEFAULT CURRENT_TIMESTAMP,
     INDEX idx_token (token)
