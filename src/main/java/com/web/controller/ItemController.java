@@ -1,6 +1,6 @@
 package com.web.controller;
 
-import com.service.ItemService;
+import com.service.UserService;
 import com.web.support.ApiResponse;
 import com.web.view.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,11 +10,11 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api")
 public class ItemController {
     @Autowired
-    private ItemService itemService;
+    private UserService userService;
 
-    @PostMapping("/items")
-    public Object getItems(@RequestHeader("token") String token) {
-        return itemService.getItemsByToken(token);
+    @GetMapping("/items")
+    public Object getItems(@RequestParam("name") String name) {
+        return userService.getUsersByName(name);
     }
 
     @GetMapping("/test")
