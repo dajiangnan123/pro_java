@@ -1,6 +1,7 @@
 package com.infrastructure.mysql.mapper;
 
 import com.infrastructure.mysql.model.User;
+import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import java.util.List;
@@ -14,4 +15,7 @@ public interface UserMapper {
 
     @Insert("INSERT INTO users(`name`)values (#{name})")
     int add(String name);
+
+    @Delete("DELETE from users WHERE name = #{name}")
+    int delete(String name);
 }

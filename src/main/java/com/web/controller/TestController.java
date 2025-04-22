@@ -18,6 +18,7 @@ public class TestController {
             throw new IllegalArgumentException("用户 ID 必须大于 0");
         }
         demo.mysqlDemo();
+        demo.redisDemo();
         return ApiResponse.success(new DemoVo(id));
     }
 }
