@@ -19,6 +19,7 @@ public class TestController {
         }
         demo.mysqlDemo();
         demo.redisDemo();
+        demo.mongoDemo();
         return ApiResponse.success(new DemoVo(id));
     }
 }
